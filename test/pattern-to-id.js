@@ -1,7 +1,7 @@
 var Chai = require( 'chai' )
 var expect = Chai.expect
 var Subscription = require( 'realizehit-subscription' )
-var pattern2id = require( '../src/pattern-to-id' )
+var pattern2id = require( '../' )
 
 describe( 'pattern to id', function () {
 
