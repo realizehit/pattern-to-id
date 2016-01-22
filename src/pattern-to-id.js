@@ -1,7 +1,7 @@
 var Subscription = require( 'realizehit-subscription' )
 var crypto = require( 'crypto' )
 
-var debug = require( 'debug' )( 'realizehit:ws:pattern-to-id' )
+var debug = require( 'debug' )( 'realizehit:pattern-to-id' )
 
 function pattern2id ( pattern ) {
 
