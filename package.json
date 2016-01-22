@@ -1,0 +1,36 @@
+{
+  "name": "realizehit-parent-to-id",
+  "version": "0.0.0",
+  "description": "helper that converts a pattern to an unique id",
+  "main": "src/pattern-to-id.js",
+  "scripts": {
+    "test-jshint": "jshint .",
+    "test-mocha": "mocha --globals setImmediate,clearImmediate --check-leaks --colors -t 10000 --reporter spec $(find test/* -name '*.test.js')",
+    "test": "for kind in jshint mocha; do npm run test-$kind; [ $? -ne 0 ] && exit 1; done; exit 0",
+    "preversion": "npm test",
+    "postversion": "git push origin master && git push origin --tags && npm publish"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/realizehit/pattern-to-id.git"
+  },
+  "keywords": [
+    "realizehit",
+    "ws",
+    "client"
+  ],
+  "author": "José Moreira <jose.moreira@microdual.com>",
+  "license": "GPL-3.0",
+  "bugs": {
+    "url": "https://github.com/realizehit/pattern-to-id/issues"
+  },
+  "homepage": "https://github.com/realizehit/pattern-to-id#readme",
+  "devDependencies": {
+    "chai": "^3.4.1",
+    "jshint": "^2.9.1",
+    "mocha": "^2.3.4"
+  },
+  "dependencies": {
+    "realizehit-subscription": "^0.1.3"
+  }
+}
