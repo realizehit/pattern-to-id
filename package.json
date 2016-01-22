@@ -1,6 +1,6 @@
 {
   "name": "realizehit-parent-to-id",
-  "version": "0.0.0",
+  "version": "0.1.0",
   "description": "helper that converts a pattern to an unique id",
   "main": "src/pattern-to-id.js",
   "scripts": {
