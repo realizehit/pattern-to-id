@@ -1,6 +1,4 @@
-var Subscription = require( 'realizehit-subscription' )
 var crypto = require( 'crypto' )
-
 var debug = require( 'debug' )( 'realizehit:pattern-to-id' )
 
 function pattern2id ( pattern ) {
@@ -8,10 +6,10 @@ function pattern2id ( pattern ) {
     debug( "trying to figure out id of", pattern )
 
     var stringified =
-        typeof pattern == 'object' && (
-            pattern instanceof Subscription && pattern.toString() ||
-            (new Subscription( pattern )).toString()
-        ) ||
+        typeof pattern == 'object' && (function ( Subscription ) {
+            return pattern instanceof Subscription && pattern.pattern.stringify() ||
+                   (new Subscription.Pattern( pattern )).stringify()
+        })(require( 'realizehit-subscription' )) ||
         typeof pattern == 'string' && pattern ||
         false
 
