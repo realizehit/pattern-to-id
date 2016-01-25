@@ -1,6 +1,6 @@
 {
   "name": "realizehit-pattern-to-id",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "helper that converts a pattern to an unique id",
   "main": "src/pattern-to-id.js",
   "scripts": {
