@@ -1,7 +1,7 @@
 var crypto = require( 'crypto' )
 var debug = require( 'debug' )( 'realizehit:pattern-to-id' )
 
-function pattern2id ( pattern ) {
+function pattern2id ( pattern ) {
 
     debug( "trying to figure out id of", pattern )
 
